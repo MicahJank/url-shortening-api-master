@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="/index.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -38,41 +40,43 @@
     </section>
   </header>
 
-  <!-- URL shortening Input -->
-  <section class="url-shortening">
-    <form method="POST">
-      <input type="text" id="url-input" aria-label="Shorten URL link form input" placeholder="Shorten a link here...">
-      <button>Shorten It!</button>
-    </form>
-  </section>
+  <section class="main-content">
+    <!-- URL shortening Input -->
+    <section class="url-shortening">
+      <form method="POST">
+        <input type="text" id="url-input" aria-label="Shorten URL Input" placeholder="Shorten a link here...">
+        <button>Shorten It!</button>
+      </form>
+    </section>
 
-  <!-- Statistics Overview Text -->
-  <section class="statistics">
-    <h3>Advanced Statistics</h3>
-    <p>Track how your links are performing across the web with our 
-      advanced statistics dashboard.</p>
-  </section>
+    <!-- Statistics Overview Text -->
+    <section class="statistics">
+      <h3>Advanced Statistics</h3>
+      <p>Track how your links are performing across the web with our 
+        advanced statistics dashboard.</p>
+    </section>
 
-  <!-- Feature Cards -->
-  <section class="feature-cards">
-    <div class="brand-recognition feature-card">
-      <img src="./images/icon-brand-recognition.svg" alt="brand recognition logo" />
-      <h5>Brand Recognition</h5>
-      <p>Boost your brand recognition with each click. Generic links don’t 
-        mean a thing. Branded links help instil confidence in your content.</p>
-    </div>
-    <div class="detailed-records feature-card">
-      <img src="./images/icon-detailed-records.svg" alt="detailed records logo" />
-      <h5>Detailed Records</h5>
-      <p>Gain insights into who is clicking your links. Knowing when and where 
-        people engage with your content helps inform better decisions.</p>
-    </div>
-    <div class="fully-customizable feature-card">
-      <img src="./images/icon-fully-customizable.svg" alt="fully customizable logo" />
-      <h5>Fully Customizable</h5>
-      <p>Improve brand awareness and content discoverability through customizable 
-        links, supercharging audience engagement.</p>
-    </div>
+    <!-- Feature Cards -->
+    <section class="feature-cards">
+      <div class="brand-recognition feature-card">
+        <img src="./images/icon-brand-recognition.svg" alt="brand recognition logo" />
+        <h5>Brand Recognition</h5>
+        <p>Boost your brand recognition with each click. Generic links don’t 
+          mean a thing. Branded links help instil confidence in your content.</p>
+      </div>
+      <div class="detailed-records feature-card">
+        <img src="./images/icon-detailed-records.svg" alt="detailed records logo" />
+        <h5>Detailed Records</h5>
+        <p>Gain insights into who is clicking your links. Knowing when and where 
+          people engage with your content helps inform better decisions.</p>
+      </div>
+      <div class="fully-customizable feature-card">
+        <img src="./images/icon-fully-customizable.svg" alt="fully customizable logo" />
+        <h5>Fully Customizable</h5>
+        <p>Improve brand awareness and content discoverability through customizable 
+          links, supercharging audience engagement.</p>
+      </div>
+    </section>
   </section>
 
   <!-- Call to Action -->
@@ -83,34 +87,41 @@
 
   <!-- Footer -->
   <footer>
-    <nav>
-
-    </nav>
+    <div class="container">
+      <img src='./images/logo.svg' alt="shortly logo" />
+      <nav>
+        <ul class="features">
+          <li>Features</li>
+          <li><a href="">Link Shortening</a></li>
+          <li><a href="">Branded Links</a></li>
+          <li><a href="">Analytics</a></li>
+        </ul>
+        <ul class="resources">
+          <li>Resources</li>
+          <li><a href="">Blog</a></li>
+          <li><a href="">Developers</a></li>
+          <li><a href="">Support</a></li>
+        </ul>
+        <ul class="company">
+          <li>Company</li>
+          <li><a href="">About</a></li>
+          <li><a href="">Our Team</a><li>
+          <li><a href="">Careers</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+        <ul class="social">
+          <li><img src="./images/icon-facebook.svg" alt="" /></li>
+          <li><img src="./images/icon-twitter.svg" alt="" /></li>
+          <li><img src="./images/icon-pinterest.svg" alt="" /></li>
+          <li><img src="./images/icon-instagram.svg" alt="" /></li>
+        </ul>
+      </nav>
+    </div>
   </footer>
-
-  
-  Features
-
-  Link Shortening
-  Branded Links
-  Analytics
-
-  Resources
-
-  Blog
-  Developers
-  Support
-
-  Company
-
-  About
-  Our Team
-  Careers
-  Contact
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Micah Jank</a>.
   </div>
 </body>
 </html>
