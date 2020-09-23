@@ -1,0 +1,8 @@
+@use 'variables';
+@use 'mixins';
+.main-content {
+    display: flex;
+    flex-direction: column;
+    @include mixins.sectionCenter();
+}
+// url shortening input

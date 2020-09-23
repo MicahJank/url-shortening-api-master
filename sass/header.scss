@@ -1,0 +1,32 @@
+@use 'variables';
+@use 'mixins';
+
+header {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.top-navigation {
+    @include mixins.sectionCenter();
+    display: flex;
+    justify-content: space-between;
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .sign-up {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+
+// Intro section
+.intro {
+    @include mixins.sectionCenter();
+    display: flex;
+    flex-direction: column;
+}
