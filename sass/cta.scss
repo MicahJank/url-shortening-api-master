@@ -1,0 +1,8 @@
+@use 'variables';
+@use 'mixins';
+
+.cta {
+    @include mixins.flexing(column);
+    background-color: variables.$primary-purple;
+    background-image: url('../images/bg-boost-desktop.svg');
+}

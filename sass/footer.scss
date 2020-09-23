@@ -1,0 +1,30 @@
+@use 'variables';
+@use 'mixins';
+
+footer {
+    background-color: variables.$dark-violet;
+    .container {
+        @include mixins.flexing(row, space-between, flex-start);
+        @include mixins.sectionCenter();
+    }
+
+    nav {
+        color: white;
+        @include mixins.flexing(row, space-between);
+        width: 60%;
+
+        .social {
+            @include mixins.flexing(row, space-between)
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: white;
+        }
+    }
+
+    img {
+        filter: brightness(100);
+    }
+}
+
