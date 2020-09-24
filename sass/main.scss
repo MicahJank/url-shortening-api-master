@@ -1,8 +1,43 @@
 @use 'variables';
 @use 'mixins';
 .main-content {
+    position: relative;
     display: flex;
     flex-direction: column;
     @include mixins.sectionCenter();
+
+    
+    // url shortening input
+    .url-shortening {
+        position: relative;
+        top: -80px;
+        width: 100%;
+        padding: 50px;
+        border-radius: 1rem;
+        @include mixins.flexing(row);
+        background-color: variables.$primary-purple;
+        background-image: url('../images/bg-shorten-desktop.svg');
+        background-size: cover;
+        form {
+            @include mixins.flexing(row, space-between);
+            width: 100%;
+        }
+        #url-input {
+            padding: 20px 30px;
+            width: 80%;
+            border-radius: 1rem;
+            border: none;
+            font-size: 2rem;
+            @include mixins.placeholder-color();
+        }
+        button {
+            @include mixins.button();
+            width: 18%;
+            border-radius: 1rem;
+            padding: 20px;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+    }
+
 }
-// url shortening input
