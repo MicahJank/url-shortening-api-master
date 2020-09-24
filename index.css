@@ -68,6 +68,7 @@ body {
 }
 
 header {
+  overflow-x: hidden;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -94,6 +95,7 @@ header .top-navigation .signup.btn {
   padding: 12px 20px;
   border-radius: 2rem;
   background-color: #2acfcf;
+  border: none;
 }
 header .top-navigation nav {
   display: flex;
@@ -117,7 +119,7 @@ header .intro {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 100px 0 200px;
+  padding: 100px 0 220px;
 }
 header .intro .big-intro {
   font-size: 7.5rem;
@@ -140,20 +142,76 @@ header .intro .get-started {
   padding: 17px 40px;
   border-radius: 2rem;
   background-color: #2acfcf;
+  border: none;
   border-radius: 3rem;
 }
 header img.working {
   position: absolute;
   z-index: 0;
   right: -8%;
-  bottom: 15%;
+  bottom: 18%;
 }
 
 .main-content {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 78%;
   margin: 0 auto;
+}
+.main-content .url-shortening {
+  position: relative;
+  top: -80px;
+  width: 100%;
+  padding: 50px;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #3b3054;
+  background-image: url("../images/bg-shorten-desktop.svg");
+  background-size: cover;
+}
+.main-content .url-shortening form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.main-content .url-shortening #url-input {
+  padding: 20px 30px;
+  width: 80%;
+  border-radius: 1rem;
+  border: none;
+  font-size: 2rem;
+}
+.main-content .url-shortening #url-input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #bfbfbf;
+  opacity: 1;
+  /* Firefox adds opacity by default so we set it to 1 to fix that */
+}
+.main-content .url-shortening #url-input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #bfbfbf;
+}
+.main-content .url-shortening #url-input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #bfbfbf;
+}
+.main-content .url-shortening button {
+  color: white;
+  padding: 12px 20px;
+  border-radius: 2rem;
+  background-color: #2acfcf;
+  border: none;
+  width: 18%;
+  border-radius: 1rem;
+  padding: 20px;
+  font-size: 2rem;
+  font-weight: 700;
 }
 
 .cta {
