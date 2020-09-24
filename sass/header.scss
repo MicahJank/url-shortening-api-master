@@ -2,31 +2,75 @@
 @use 'mixins';
 
 header {
+    position: relative;
     display: flex;
     flex-direction: column;
     background-color: white;
-}
 
-.top-navigation {
-    @include mixins.sectionCenter();
-    display: flex;
-    justify-content: space-between;
 
-    nav {
-        display: flex;
-        justify-content: space-between;
+    a {
+        text-decoration: none;
+        color: variables.$gray-violet;
+        font-weight: 500;
+        font-size: 1.5rem;
     }
 
-    .sign-up {
-        display: flex;
-        justify-content: space-between;
+    .top-navigation {
+        z-index: 1;
+        @include mixins.sectionCenter();
+        @include mixins.flexing(row, space-between);
+        padding: 50px 0;
+
+        .signup.btn {
+            @include mixins.button();
+        }
+
+        nav {
+            @include mixins.flexing(row, space-between);
+            width: 40%;
+        }
+
+        .sign-up {
+            @include mixins.flexing(row, space-between);
+            width: 15%;
+        }
     }
-}
 
 
-// Intro section
-.intro {
-    @include mixins.sectionCenter();
-    display: flex;
-    flex-direction: column;
+    // Intro section
+    .intro {
+        z-index: 1;
+        @include mixins.sectionCenter();
+        @include mixins.flexing(column, flex-start, flex-start);
+        padding: 100px 0 200px;
+        .big-intro {
+            font-size: 7.5rem;
+            font-weight: 700;
+            color: variables.$dark-blue;
+            width: 50%;
+            line-height: 1.2;
+        }
+        p {
+            font-size: 2.2rem;
+            width: 50%;
+            line-height: 1.6;
+            color: variables.$gray-violet;
+            font-weight: 400;
+        }
+
+        .get-started {
+            margin-top: 30px;
+            font-size: 2rem;
+            @include mixins.button(white, 17px 40px);
+            border-radius: 3rem;
+        }
+    }
+
+    img.working {
+        position: absolute;
+        z-index: 0;
+        right: -8%;
+        bottom: 15%;
+    }
+
 }
