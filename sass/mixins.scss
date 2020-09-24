@@ -1,3 +1,4 @@
+@use 'variables';
 // section centering and spacing
 @mixin sectionCenter {
     width: 78%;
@@ -10,4 +11,12 @@
     flex-direction: $direction;
     justify-content: $justify;
     align-items: $align;
+}
+
+// primary button
+@mixin button($color: white, $padding: 12px 20px, $backgroundColor: variables.$primary-blue) {
+    color: $color;
+    padding: $padding;
+    border-radius: 2rem;
+    background-color: $backgroundColor
 }
