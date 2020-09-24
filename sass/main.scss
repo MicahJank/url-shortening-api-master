@@ -40,4 +40,20 @@
         }
     }
 
+
+    // Advance statistics text
+    .statistics {
+        @include mixins.flexing(column);
+        color: variables.$dark-blue;
+        
+        h3 {
+            font-size: 3.7rem;
+            font-weight: 700;
+        }
+        p {
+            font-weight: 400;
+            color: variables.$gray-violet;
+        }
+    }
+
 }

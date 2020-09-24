@@ -213,6 +213,21 @@ header img.working {
   font-size: 2rem;
   font-weight: 700;
 }
+.main-content .statistics {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #35323e;
+}
+.main-content .statistics h3 {
+  font-size: 3.7rem;
+  font-weight: 700;
+}
+.main-content .statistics p {
+  font-weight: 400;
+  color: #9e9aa7;
+}
 
 .cta {
   display: flex;
