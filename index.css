@@ -68,31 +68,85 @@ body {
 }
 
 header {
+  position: relative;
   display: flex;
   flex-direction: column;
   background-color: white;
 }
-
-.top-navigation {
+header a {
+  text-decoration: none;
+  color: #9e9aa7;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+header .top-navigation {
+  z-index: 1;
   width: 78%;
   margin: 0 auto;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  padding: 50px 0;
 }
-.top-navigation nav {
+header .top-navigation .signup.btn {
+  color: white;
+  padding: 12px 20px;
+  border-radius: 2rem;
+  background-color: #2acfcf;
+}
+header .top-navigation nav {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  width: 40%;
 }
-.top-navigation .sign-up {
+header .top-navigation .sign-up {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  width: 15%;
 }
-
-.intro {
+header .intro {
+  z-index: 1;
   width: 78%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 100px 0 200px;
+}
+header .intro .big-intro {
+  font-size: 7.5rem;
+  font-weight: 700;
+  color: #35323e;
+  width: 50%;
+  line-height: 1.2;
+}
+header .intro p {
+  font-size: 2.2rem;
+  width: 50%;
+  line-height: 1.6;
+  color: #9e9aa7;
+  font-weight: 400;
+}
+header .intro .get-started {
+  margin-top: 30px;
+  font-size: 2rem;
+  color: white;
+  padding: 17px 40px;
+  border-radius: 2rem;
+  background-color: #2acfcf;
+  border-radius: 3rem;
+}
+header img.working {
+  position: absolute;
+  z-index: 0;
+  right: -8%;
+  bottom: 15%;
 }
 
 .main-content {
