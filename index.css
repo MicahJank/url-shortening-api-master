@@ -221,12 +221,65 @@ header img.working {
   color: #35323e;
 }
 .main-content .statistics h3 {
-  font-size: 3.7rem;
+  font-size: 3.9rem;
   font-weight: 700;
+  margin: 40px 0 20px;
 }
 .main-content .statistics p {
   font-weight: 400;
   color: #9e9aa7;
+  width: 45%;
+  text-align: center;
+  line-height: 2;
+}
+.main-content .feature-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 25px 0;
+}
+.main-content .feature-cards .feature-card {
+  position: relative;
+  padding: 0 25px 35px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-size: 1.6rem;
+  color: #bfbfbf;
+  border-radius: 0.7rem;
+}
+.main-content .feature-cards .feature-card h5 {
+  color: #35323e;
+  font-weight: 700;
+  font-size: 2rem;
+}
+.main-content .feature-cards .feature-card p {
+  margin-top: 20px;
+  line-height: 1.6;
+  font-weight: 300;
+}
+.main-content .feature-cards .feature-card .img {
+  position: relative;
+  top: -45px;
+  padding: 25px;
+  background-color: #3b3054;
+  border-radius: 50%;
+}
+.main-content .feature-cards .detailed-records {
+  margin-top: 80px;
+}
+.main-content .feature-cards .fully-customizable {
+  margin-top: 160px;
+}
+.main-content .feature-cards .dash {
+  width: 100px;
+  height: 8px;
+  background-color: #2acfcf;
+  margin-top: 30px;
 }
 
 .cta {

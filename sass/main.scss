@@ -47,12 +47,70 @@
         color: variables.$dark-blue;
         
         h3 {
-            font-size: 3.7rem;
+            font-size: 3.9rem;
             font-weight: 700;
+            margin: 40px 0 20px;
         }
         p {
             font-weight: 400;
             color: variables.$gray-violet;
+            width: 45%;
+            text-align: center;
+            line-height: 2;
+        }
+    }
+
+
+
+    // feature cards
+    .feature-cards {
+        @include mixins.flexing(row);
+        width: 100%;
+        margin: 25px 0;
+
+        .feature-card {
+            position: relative;
+            padding: 0 25px 35px;
+            background-color: white;
+            @include mixins.flexing(column, flex-start, flex-start);
+            font-size: 1.6rem;
+            color: variables.$gray;
+            border-radius: 0.7rem;
+
+            h5 {
+                color: variables.$dark-blue;
+                font-weight: 700;
+                font-size: 2rem;
+            }
+
+            p {
+                margin-top: 20px;
+                line-height: 1.6;
+                font-weight: 300;
+            }
+
+            .img {
+                position: relative;
+                top: -45px;
+                padding: 25px;
+                background-color: variables.$primary-purple;
+                border-radius: 50%;
+            }
+        }
+
+        .detailed-records {
+            margin-top: 80px;
+        }
+
+        .fully-customizable {
+            margin-top: 160px;
+        }
+
+        .dash {
+            width: 100px;
+            height: 8px;
+            background-color: variables.$primary-blue;
+            margin-top: 30px;
         }
     }
 
