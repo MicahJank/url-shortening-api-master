@@ -10,6 +10,9 @@
   <link rel="stylesheet" href="/index.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
 
+  <!-- javascript imports -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./javascript/apiRequests.js" async></script>
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -44,9 +47,9 @@
   <section class="main-content">
     <!-- URL shortening Input -->
     <section class="url-shortening">
-      <form method="POST">
+      <form class="shortening" method="POST">
         <input type="text" id="url-input" aria-label="Shorten URL Input" placeholder="Shorten a link here...">
-        <button>Shorten It!</button>
+        <button type="submit" class="shorten-btn">Shorten It!</button>
       </form>
     </section>
 
