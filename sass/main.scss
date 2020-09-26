@@ -46,11 +46,6 @@
         @include mixins.flexing(column);
         color: variables.$dark-blue;
         
-        h3 {
-            font-size: 3.9rem;
-            font-weight: 700;
-            margin: 40px 0 20px;
-        }
         p {
             font-weight: 400;
             color: variables.$gray-violet;
@@ -70,11 +65,12 @@
 
         .feature-card {
             position: relative;
+            width: 30%;
             padding: 0 25px 35px;
             background-color: white;
             @include mixins.flexing(column, flex-start, flex-start);
             font-size: 1.6rem;
-            color: variables.$gray;
+            color: variables.$gray-violet;
             border-radius: 0.7rem;
 
             h5 {
@@ -86,7 +82,7 @@
             p {
                 margin-top: 20px;
                 line-height: 1.6;
-                font-weight: 300;
+                font-weight: 500;
             }
 
             .img {
@@ -107,7 +103,7 @@
         }
 
         .dash {
-            width: 100px;
+            width: 30px;
             height: 8px;
             background-color: variables.$primary-blue;
             margin-top: 30px;

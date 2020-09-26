@@ -2,6 +2,7 @@
 @use 'mixins';
 
 footer {
+    padding: 80px 0;
     background-color: variables.$dark-violet;
     .container {
         @include mixins.flexing(row, space-between, flex-start);
@@ -10,16 +11,29 @@ footer {
 
     nav {
         color: white;
-        @include mixins.flexing(row, space-between);
-        width: 60%;
+        @include mixins.flexing(row, space-between, flex-start);
+        width: 65%;
+
+        ul li {
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+            &:first-child {
+                font-size: 1.6rem;
+                margin-bottom: 30px;
+                color: white;
+                font-weight: 700;
+            }
+        }
+
 
         .social {
-            @include mixins.flexing(row, space-between)
+            @include mixins.flexing(row, space-between, baseline);
+            width: 20%;
         }
 
         ul li a {
             text-decoration: none;
-            color: white;
+            color: variables.$gray;
         }
     }
 
