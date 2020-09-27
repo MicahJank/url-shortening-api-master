@@ -54,6 +54,7 @@ table {
 
 * {
   box-sizing: border-box;
+  outline: none;
 }
 
 html {
@@ -103,6 +104,10 @@ header .top-navigation .signup.btn {
   background-color: #2acfcf;
   border: none;
 }
+header .top-navigation .signup.btn:hover {
+  cursor: pointer;
+  background-color: #a3e6e6;
+}
 header .top-navigation nav {
   display: flex;
   flex-direction: row;
@@ -151,6 +156,10 @@ header .intro .get-started {
   border: none;
   border-radius: 3rem;
 }
+header .intro .get-started:hover {
+  cursor: pointer;
+  background-color: #a3e6e6;
+}
 header img.working {
   position: absolute;
   z-index: 0;
@@ -167,17 +176,19 @@ header img.working {
 }
 .main-content .url-shortening {
   position: relative;
+  z-index: 2;
   top: -80px;
   width: 100%;
   padding: 50px;
   border-radius: 1rem;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   background-color: #3b3054;
   background-image: url("../images/bg-shorten-desktop.svg");
   background-size: cover;
+  flex-wrap: wrap;
 }
 .main-content .url-shortening form {
   display: flex;
@@ -190,7 +201,7 @@ header img.working {
   padding: 20px 30px;
   width: 80%;
   border-radius: 1rem;
-  border: none;
+  border: 2px solid white;
   font-size: 2rem;
 }
 .main-content .url-shortening #url-input::placeholder {
@@ -207,7 +218,46 @@ header img.working {
   /* Microsoft Edge */
   color: #bfbfbf;
 }
+.main-content .url-shortening #url-input:focus {
+  border: 2px solid #2acfcf;
+}
+.main-content .url-shortening #url-input.error {
+  border: 2px solid #ff6262;
+}
+.main-content .url-shortening #url-input.error::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(255, 98, 98, 0.562);
+  opacity: 1;
+  /* Firefox adds opacity by default so we set it to 1 to fix that */
+}
+.main-content .url-shortening #url-input.error:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgba(255, 98, 98, 0.562);
+}
+.main-content .url-shortening #url-input.error::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: rgba(255, 98, 98, 0.562);
+}
+.main-content .url-shortening #url-input.error:focus {
+  border: 2px solid #2acfcf;
+}
+.main-content .url-shortening #url-input.error:focus::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #bfbfbf;
+  opacity: 1;
+  /* Firefox adds opacity by default so we set it to 1 to fix that */
+}
+.main-content .url-shortening #url-input.error:focus:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #bfbfbf;
+}
+.main-content .url-shortening #url-input.error:focus::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #bfbfbf;
+}
 .main-content .url-shortening button {
+  position: relative;
+  cursor: pointer;
   color: white;
   padding: 12px 20px;
   border-radius: 2rem;
@@ -218,6 +268,67 @@ header img.working {
   padding: 20px;
   font-size: 2rem;
   font-weight: 700;
+}
+.main-content .url-shortening button:hover {
+  cursor: pointer;
+  background-color: #a3e6e6;
+}
+.main-content .url-shortening .input-error {
+  position: absolute;
+  bottom: 25px;
+  font-style: italic;
+  font-size: 1.6rem;
+  color: #ff6262;
+}
+.main-content .shortend-links {
+  width: 100%;
+  margin-top: -60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.main-content .shortend-links .link {
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-content .shortend-links .link div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-content .shortend-links .link div a {
+  color: #2acfcf;
+  margin-right: 30px;
+}
+.main-content .shortend-links .link div button {
+  color: white;
+  padding: 12px 0;
+  border-radius: 2rem;
+  background-color: #2acfcf;
+  border: none;
+  width: 100px;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.main-content .shortend-links .link div button:hover {
+  cursor: pointer;
+  background-color: #a3e6e6;
+}
+.main-content .shortend-links .link div .copied {
+  background-color: #3b3054;
+}
+.main-content .shortend-links .link div .copied:hover {
+  background-color: #3b3054;
 }
 .main-content .statistics {
   display: flex;
@@ -239,11 +350,11 @@ header img.working {
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin: 25px 0;
+  margin: 25px 0 110px;
 }
 .main-content .feature-cards .feature-card {
   position: relative;
-  width: 30%;
+  width: 35%;
   padding: 0 25px 35px;
   background-color: white;
   display: flex;
@@ -309,6 +420,10 @@ header img.working {
   border-radius: 3rem;
   margin-top: 10px;
 }
+.cta button:hover {
+  cursor: pointer;
+  background-color: #a3e6e6;
+}
 
 footer {
   padding: 80px 0;
@@ -347,9 +462,16 @@ footer nav .social {
   align-items: baseline;
   width: 20%;
 }
+footer nav .social li img:hover {
+  cursor: pointer;
+  filter: invert(25%) sepia(34%) saturate(5733%) hue-rotate(133deg) brightness(95%) contrast(85%);
+}
 footer nav ul li a {
   text-decoration: none;
   color: #bfbfbf;
+}
+footer nav ul li a:hover {
+  color: #2acfcf;
 }
 footer img {
   filter: brightness(100);
