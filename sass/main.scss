@@ -78,6 +78,11 @@
             background-color: white;
             border-radius: 5px;
             @include mixins.flexing(row, space-between);
+            flex-wrap: wrap;
+
+            @media only screen and (max-width: 600px) {
+                flex-direction: column;
+            }
 
             div {
                 @include mixins.flexing(row, space-between);
@@ -99,6 +104,10 @@
                     &:hover {
                         background-color: variables.$primary-purple;
                     }
+                }
+
+                @media only screen and (max-width: 600px) {
+                    flex-direction: column;
                 }
             }
         }
@@ -126,6 +135,10 @@
         @include mixins.flexing(row); 
         width: 100%;
         margin: 25px 0 110px;
+
+        @media only screen and (max-width: 600px) {
+            flex-direction: column;
+        }
 
         .feature-card {
             position: relative;
