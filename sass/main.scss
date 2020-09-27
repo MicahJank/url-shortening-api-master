@@ -6,18 +6,19 @@
     flex-direction: column;
     @include mixins.sectionCenter();
 
-    
     // url shortening input
     .url-shortening {
         position: relative;
+        z-index: 2;
         top: -80px;
         width: 100%;
         padding: 50px;
         border-radius: 1rem;
-        @include mixins.flexing(row);
+        @include mixins.flexing(row, flex-start, flex-start);
         background-color: variables.$primary-purple;
         background-image: url('../images/bg-shorten-desktop.svg');
         background-size: cover;
+        flex-wrap: wrap;
         form {
             @include mixins.flexing(row, space-between);
             width: 100%;
@@ -26,17 +27,80 @@
             padding: 20px 30px;
             width: 80%;
             border-radius: 1rem;
-            border: none;
+            border: 2px solid white;
             font-size: 2rem;
             @include mixins.placeholder-color();
+
+            &:focus {
+                border: 2px solid variables.$primary-blue;
+            }
+        }
+
+        #url-input.error {
+            border: 2px solid rgb(255, 98, 98);
+            @include mixins.placeholder-color(rgba(255, 98, 98, 0.562));
+            &:focus {
+                border: 2px solid variables.$primary-blue;
+                @include mixins.placeholder-color();
+            }
         }
         button {
+            position: relative;
+            cursor: pointer;
             @include mixins.button();
             width: 18%;
             border-radius: 1rem;
             padding: 20px;
             font-size: 2rem;
             font-weight: 700;
+        }
+
+        .input-error {
+            position: absolute;
+            bottom: 25px;
+            font-style: italic;
+            font-size: 1.6rem;
+            color: rgb(255, 98, 98);
+        }
+    }
+
+
+    // links section
+    .shortend-links {
+        width: 100%;
+        margin-top: -60px;
+        @include mixins.flexing(column, flex-start, flex-start);
+
+        .link {
+            margin-bottom: 20px;
+            width: 100%;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            @include mixins.flexing(row, space-between);
+
+            div {
+                @include mixins.flexing(row, space-between);
+                a {
+                    color: variables.$primary-blue;
+                    margin-right: 30px;
+                }
+
+                button {
+                    @include mixins.button(white, 12px 0);
+                    width: 100px;
+                    border-radius: 5px;
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                }
+
+                .copied {
+                    background-color: variables.$primary-purple;
+                    &:hover {
+                        background-color: variables.$primary-purple;
+                    }
+                }
+            }
         }
     }
 
@@ -59,13 +123,13 @@
 
     // feature cards
     .feature-cards {
-        @include mixins.flexing(row);
+        @include mixins.flexing(row); 
         width: 100%;
-        margin: 25px 0;
+        margin: 25px 0 110px;
 
         .feature-card {
             position: relative;
-            width: 30%;
+            width: 35%;
             padding: 0 25px 35px;
             background-color: white;
             @include mixins.flexing(column, flex-start, flex-start);
