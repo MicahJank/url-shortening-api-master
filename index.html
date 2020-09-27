@@ -8,11 +8,13 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="/index.css" />
+  <link href="/dist/hamburgers.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
 
   <!-- javascript imports -->
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="./javascript/createUrls.js" async></script>
+  <script src="./javascript/toggleHamburger.js" async></script>
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -23,16 +25,23 @@
   <header>
     <!-- Navigation at the top of the page - inlcudes login and sign up buttons -->
     <section class="top-navigation">
+      <img src='./images/logo.svg' alt="shortly logo" />
+      <button class="hidden hamburger hamburger--slider" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button> 
       <nav>
-        <img src='./images/logo.svg' alt="shortly logo" />
-        <a href="">Features</a>
-        <a href="">Pricing</a>
-        <a href="">Resources</a>
+        <div class="left-side">
+          <a href="">Features</a>
+          <a href="">Pricing</a>
+          <a href="">Resources</a>
+        </div>
+        <div class="sign-up">
+          <a class="login btn" href="">Login</a>
+          <a class="signup btn" href="">Sign Up</a>
+        </div>
       </nav>
-      <div class="sign-up">
-        <a class="login btn" href="">Login</a>
-        <a class="signup btn" href="">Sign Up</a>
-      </div>
     </section>
     <!-- Intro Section -->
     <section class="intro">

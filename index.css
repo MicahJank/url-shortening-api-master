@@ -111,19 +111,30 @@ header .top-navigation .signup.btn:hover {
   cursor: pointer;
   background-color: #a3e6e6;
 }
+header .top-navigation button.hidden {
+  display: none;
+}
 header .top-navigation nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 40%;
+  width: 100%;
 }
-header .top-navigation .sign-up {
+header .top-navigation nav .left-side {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 30%;
+  margin-left: 30px;
+}
+header .top-navigation nav .sign-up {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 15%;
+  width: 17%;
 }
 header .intro {
   z-index: 1;

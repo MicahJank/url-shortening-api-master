@@ -31,23 +31,26 @@ header {
             @include mixins.button();
         }
 
+        button.hidden {
+            display: none;
+        }
+
         nav {
             @include mixins.flexing(row, space-between);
-            width: 40%;
+            width: 100%;
 
-            // a {
-            //     &:hover {
-            //         color: variables.$dark-violet;
-            //     }
-            // }
-        }
-
-        .sign-up {
-            @include mixins.flexing(row, space-between);
-            width: 15%;
-        }
-
-       
+            .left-side {
+                @include mixins.flexing(row, space-around);
+                width: 30%;
+                margin-left: 30px;
+                
+            }
+           
+            .sign-up {
+                @include mixins.flexing(row, space-between);
+                width: 17%;
+            }
+        }   
     }
 
 
