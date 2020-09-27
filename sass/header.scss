@@ -26,13 +26,18 @@ header {
         @include mixins.sectionCenter();
         @include mixins.flexing(row, space-between);
         padding: 50px 0;
+        flex-wrap: wrap;
 
         .signup.btn {
             @include mixins.button();
         }
 
-        button.hidden {
+        button.hamburger {
             display: none;
+
+            @media only screen and (max-width: 600px) {
+                display: block;
+            }
         }
 
         nav {
@@ -50,7 +55,61 @@ header {
                 @include mixins.flexing(row, space-between);
                 width: 17%;
             }
-        }   
+
+            @media only screen and (max-width: 600px) {
+                display: none;
+                padding: 40px 20px;
+                flex-direction: column;
+                border-radius: 10px;
+  
+                background-color: variables.$primary-purple;
+
+                a {
+                    color: white;
+                    font-size: 1.7rem;
+                    margin-bottom: 40px;
+                }
+                
+                .left-side {
+                    margin: 0;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                }
+
+                .sign-up {
+                    margin: 0;
+                    padding-top: 40px;
+                    width: 100%;
+                    border-top: 1px solid white;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+
+                    .signup.btn {
+                        padding: 15px 0;
+                        width: 100%;
+                        text-align: center;
+                        margin-bottom: 0;
+                    }
+                }
+
+
+            }
+        }
+        // only added when the user clicks the hamburger menu icon
+        .hidden {
+            display: none;
+        }
+        .visible {
+            display: flex;
+        }
+
+        @media only screen and (max-width: 600px)  {
+            width: 100%;
+            padding: 20px;
+        }
     }
 
 
