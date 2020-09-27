@@ -20,6 +20,10 @@
     border-radius: 2rem;
     background-color: $backgroundColor;
     border: none;
+    &:hover {
+      cursor: pointer;
+      background-color: variables.$primary-blue-lighten;
+  }
 }
 
 @mixin placeholder-color($color: variables.$gray) {
