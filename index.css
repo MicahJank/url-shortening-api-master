@@ -99,6 +99,12 @@ header .top-navigation {
   justify-content: space-between;
   align-items: center;
   padding: 50px 0;
+  flex-wrap: wrap;
+}
+@media only screen and (max-width: 600px) {
+  header .top-navigation {
+    width: 100%;
+  }
 }
 header .top-navigation .signup.btn {
   color: white;
@@ -111,8 +117,13 @@ header .top-navigation .signup.btn:hover {
   cursor: pointer;
   background-color: #a3e6e6;
 }
-header .top-navigation button.hidden {
+header .top-navigation button.hamburger {
   display: none;
+}
+@media only screen and (max-width: 600px) {
+  header .top-navigation button.hamburger {
+    display: block;
+  }
 }
 header .top-navigation nav {
   display: flex;
@@ -136,6 +147,54 @@ header .top-navigation nav .sign-up {
   align-items: center;
   width: 17%;
 }
+@media only screen and (max-width: 600px) {
+  header .top-navigation nav {
+    display: none;
+    padding: 40px 20px;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: #3b3054;
+  }
+  header .top-navigation nav a {
+    color: white;
+    font-size: 1.7rem;
+    margin-bottom: 40px;
+  }
+  header .top-navigation nav .left-side {
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  header .top-navigation nav .sign-up {
+    margin: 0;
+    padding-top: 40px;
+    width: 100%;
+    border-top: 1px solid white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  header .top-navigation nav .sign-up .signup.btn {
+    padding: 15px 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0;
+  }
+}
+header .top-navigation .hidden {
+  display: none;
+}
+header .top-navigation .visible {
+  display: flex;
+}
+@media only screen and (max-width: 600px) {
+  header .top-navigation {
+    width: 100%;
+    padding: 20px;
+  }
+}
 header .intro {
   z-index: 1;
   width: 78%;
@@ -145,6 +204,11 @@ header .intro {
   justify-content: flex-start;
   align-items: flex-start;
   padding: 100px 0 220px;
+}
+@media only screen and (max-width: 600px) {
+  header .intro {
+    width: 100%;
+  }
 }
 header .intro .big-intro {
   font-size: 7.5rem;
@@ -187,6 +251,11 @@ header img.working {
   flex-direction: column;
   width: 78%;
   margin: 0 auto;
+}
+@media only screen and (max-width: 600px) {
+  .main-content {
+    width: 100%;
+  }
 }
 .main-content .url-shortening {
   position: relative;
@@ -312,6 +381,12 @@ header img.working {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+}
+@media only screen and (max-width: 600px) {
+  .main-content .shortend-links .link {
+    flex-direction: column;
+  }
 }
 .main-content .shortend-links .link div {
   display: flex;
@@ -344,6 +419,11 @@ header img.working {
 .main-content .shortend-links .link div .copied:hover {
   background-color: #3b3054;
 }
+@media only screen and (max-width: 600px) {
+  .main-content .shortend-links .link div {
+    flex-direction: column;
+  }
+}
 .main-content .statistics {
   display: flex;
   flex-direction: column;
@@ -365,6 +445,11 @@ header img.working {
   align-items: center;
   width: 100%;
   margin: 25px 0 110px;
+}
+@media only screen and (max-width: 600px) {
+  .main-content .feature-cards {
+    flex-direction: column;
+  }
 }
 .main-content .feature-cards .feature-card {
   position: relative;
@@ -450,6 +535,16 @@ footer .container {
   align-items: flex-start;
   width: 78%;
   margin: 0 auto;
+}
+@media only screen and (max-width: 600px) {
+  footer .container {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  footer .container {
+    flex-direction: column;
+  }
 }
 footer nav {
   color: white;

@@ -7,6 +7,10 @@ footer {
     .container {
         @include mixins.flexing(row, space-between, flex-start);
         @include mixins.sectionCenter();
+
+        @media only screen and (max-width: 600px) {
+            flex-direction: column;
+        }
     }
 
     nav {
