@@ -87,6 +87,9 @@ header a {
   font-weight: 500;
   font-size: 1.5rem;
 }
+header a:hover {
+  color: #232127;
+}
 header .top-navigation {
   z-index: 1;
   width: 78%;

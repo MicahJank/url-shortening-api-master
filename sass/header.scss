@@ -14,6 +14,11 @@ header {
         color: variables.$gray-violet;
         font-weight: 500;
         font-size: 1.5rem;
+
+        &:hover {
+            color: variables.$dark-violet;
+        }
+
     }
 
     .top-navigation {
@@ -29,12 +34,20 @@ header {
         nav {
             @include mixins.flexing(row, space-between);
             width: 40%;
+
+            // a {
+            //     &:hover {
+            //         color: variables.$dark-violet;
+            //     }
+            // }
         }
 
         .sign-up {
             @include mixins.flexing(row, space-between);
             width: 15%;
         }
+
+       
     }
 
 
