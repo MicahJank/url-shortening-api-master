@@ -99,7 +99,6 @@ header .top-navigation {
   justify-content: space-between;
   align-items: center;
   padding: 50px 0;
-  flex-wrap: wrap;
 }
 @media only screen and (max-width: 600px) {
   header .top-navigation {
@@ -150,9 +149,14 @@ header .top-navigation nav .sign-up {
 @media only screen and (max-width: 600px) {
   header .top-navigation nav {
     display: none;
+    position: absolute;
     padding: 40px 20px;
     flex-direction: column;
     border-radius: 10px;
+    margin-top: 15px;
+    top: 60px;
+    right: 20px;
+    width: 90%;
     background-color: #3b3054;
   }
   header .top-navigation nav a {
@@ -192,7 +196,10 @@ header .top-navigation .visible {
 @media only screen and (max-width: 600px) {
   header .top-navigation {
     width: 100%;
-    padding: 20px;
+    padding: 20px 20px 0px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
   }
 }
 header .intro {
@@ -238,11 +245,32 @@ header .intro .get-started:hover {
   cursor: pointer;
   background-color: #a3e6e6;
 }
+@media only screen and (max-width: 600px) {
+  header .intro {
+    width: 100%;
+    margin-top: 400px;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+  }
+  header .intro .big-intro {
+    width: 100%;
+    font-size: 4rem;
+    text-align: center;
+  }
+}
 header img.working {
   position: absolute;
   z-index: 0;
   right: -8%;
   bottom: 18%;
+}
+@media only screen and (max-width: 600px) {
+  header img.working {
+    top: 90px;
+    left: 30px;
+    width: 500px;
+  }
 }
 
 .main-content {
