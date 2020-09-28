@@ -152,15 +152,22 @@ header {
         }
 
         @media only screen and (max-width: 600px)  {
-            width: 100%;
+            width: 90%;
             margin-top: 400px;
-            padding: 0px;
+            padding: 0px 0px 170px;
             justify-content: center;
             align-items: center;
 
             .big-intro {
                 width: 100%;
                 font-size: 4rem;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+
+            p {
+                width: 100%;
+                font-size: 1.8rem;
                 text-align: center;
             }
         }
