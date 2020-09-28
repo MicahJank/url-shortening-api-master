@@ -154,6 +154,7 @@
                 padding: 0;
                 p {
                     text-align: left;
+                    word-wrap: break-word;
                     border-bottom: 1px solid variables.$gray;
                     width: 100%;
                     padding: 15px;
