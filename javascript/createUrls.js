@@ -71,6 +71,7 @@ const requestShortURL = (e) => {
         axios.post('https://rel.ink/api/links/', { url: formInput.value })
             .then(res => {
                 formInput.classList.remove('error');
+                errorElement.textContent = ""
                 const newUrl = `https://rel.ink/${res.data.hashid}`
 
                 // i will need both the url and the shortendUrl when creating the url element
