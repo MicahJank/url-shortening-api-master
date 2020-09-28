@@ -54,6 +54,7 @@ table {
 
 * {
   box-sizing: border-box;
+  outline: none;
 }
 
 html {
@@ -86,6 +87,9 @@ header a {
   font-weight: 500;
   font-size: 1.5rem;
 }
+header a:hover {
+  color: #232127;
+}
 header .top-navigation {
   z-index: 1;
   width: 78%;
@@ -96,6 +100,11 @@ header .top-navigation {
   align-items: center;
   padding: 50px 0;
 }
+@media only screen and (max-width: 600px) {
+  header .top-navigation {
+    width: 100%;
+  }
+}
 header .top-navigation .signup.btn {
   color: white;
   padding: 12px 20px;
@@ -103,19 +112,95 @@ header .top-navigation .signup.btn {
   background-color: #2acfcf;
   border: none;
 }
+header .top-navigation .signup.btn:hover {
+  cursor: pointer;
+  background-color: #a3e6e6;
+}
+header .top-navigation button.hamburger {
+  display: none;
+}
+@media only screen and (max-width: 600px) {
+  header .top-navigation button.hamburger {
+    display: block;
+  }
+}
 header .top-navigation nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 40%;
+  width: 100%;
 }
-header .top-navigation .sign-up {
+header .top-navigation nav .left-side {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 30%;
+  margin-left: 30px;
+}
+header .top-navigation nav .sign-up {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 15%;
+  width: 17%;
+}
+@media only screen and (max-width: 600px) {
+  header .top-navigation nav {
+    display: none;
+    position: absolute;
+    padding: 40px 20px;
+    flex-direction: column;
+    border-radius: 10px;
+    margin-top: 15px;
+    top: 60px;
+    right: 20px;
+    width: 90%;
+    background-color: #3b3054;
+  }
+  header .top-navigation nav a {
+    color: white;
+    font-size: 1.7rem;
+    margin-bottom: 40px;
+  }
+  header .top-navigation nav .left-side {
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  header .top-navigation nav .sign-up {
+    margin: 0;
+    padding-top: 40px;
+    width: 100%;
+    border-top: 1px solid white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  header .top-navigation nav .sign-up .signup.btn {
+    padding: 15px 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0;
+  }
+}
+header .top-navigation .hidden {
+  display: none;
+}
+header .top-navigation .visible {
+  display: flex;
+}
+@media only screen and (max-width: 600px) {
+  header .top-navigation {
+    width: 100%;
+    padding: 20px 20px 0px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+  }
 }
 header .intro {
   z-index: 1;
@@ -126,6 +211,11 @@ header .intro {
   justify-content: flex-start;
   align-items: flex-start;
   padding: 100px 0 220px;
+}
+@media only screen and (max-width: 600px) {
+  header .intro {
+    width: 100%;
+  }
 }
 header .intro .big-intro {
   font-size: 7.5rem;
@@ -151,11 +241,36 @@ header .intro .get-started {
   border: none;
   border-radius: 3rem;
 }
+header .intro .get-started:hover {
+  cursor: pointer;
+  background-color: #a3e6e6;
+}
+@media only screen and (max-width: 600px) {
+  header .intro {
+    width: 100%;
+    margin-top: 400px;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+  }
+  header .intro .big-intro {
+    width: 100%;
+    font-size: 4rem;
+    text-align: center;
+  }
+}
 header img.working {
   position: absolute;
   z-index: 0;
   right: -8%;
   bottom: 18%;
+}
+@media only screen and (max-width: 600px) {
+  header img.working {
+    top: 90px;
+    left: 30px;
+    width: 500px;
+  }
 }
 
 .main-content {
@@ -165,19 +280,26 @@ header img.working {
   width: 78%;
   margin: 0 auto;
 }
+@media only screen and (max-width: 600px) {
+  .main-content {
+    width: 100%;
+  }
+}
 .main-content .url-shortening {
   position: relative;
+  z-index: 2;
   top: -80px;
   width: 100%;
   padding: 50px;
   border-radius: 1rem;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   background-color: #3b3054;
   background-image: url("../images/bg-shorten-desktop.svg");
   background-size: cover;
+  flex-wrap: wrap;
 }
 .main-content .url-shortening form {
   display: flex;
@@ -190,7 +312,7 @@ header img.working {
   padding: 20px 30px;
   width: 80%;
   border-radius: 1rem;
-  border: none;
+  border: 2px solid white;
   font-size: 2rem;
 }
 .main-content .url-shortening #url-input::placeholder {
@@ -207,7 +329,46 @@ header img.working {
   /* Microsoft Edge */
   color: #bfbfbf;
 }
+.main-content .url-shortening #url-input:focus {
+  border: 2px solid #2acfcf;
+}
+.main-content .url-shortening #url-input.error {
+  border: 2px solid #ff6262;
+}
+.main-content .url-shortening #url-input.error::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(255, 98, 98, 0.562);
+  opacity: 1;
+  /* Firefox adds opacity by default so we set it to 1 to fix that */
+}
+.main-content .url-shortening #url-input.error:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgba(255, 98, 98, 0.562);
+}
+.main-content .url-shortening #url-input.error::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: rgba(255, 98, 98, 0.562);
+}
+.main-content .url-shortening #url-input.error:focus {
+  border: 2px solid #2acfcf;
+}
+.main-content .url-shortening #url-input.error:focus::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #bfbfbf;
+  opacity: 1;
+  /* Firefox adds opacity by default so we set it to 1 to fix that */
+}
+.main-content .url-shortening #url-input.error:focus:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #bfbfbf;
+}
+.main-content .url-shortening #url-input.error:focus::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #bfbfbf;
+}
 .main-content .url-shortening button {
+  position: relative;
+  cursor: pointer;
   color: white;
   padding: 12px 20px;
   border-radius: 2rem;
@@ -218,6 +379,78 @@ header img.working {
   padding: 20px;
   font-size: 2rem;
   font-weight: 700;
+}
+.main-content .url-shortening button:hover {
+  cursor: pointer;
+  background-color: #a3e6e6;
+}
+.main-content .url-shortening .input-error {
+  position: absolute;
+  bottom: 25px;
+  font-style: italic;
+  font-size: 1.6rem;
+  color: #ff6262;
+}
+.main-content .shortend-links {
+  width: 100%;
+  margin-top: -60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.main-content .shortend-links .link {
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media only screen and (max-width: 600px) {
+  .main-content .shortend-links .link {
+    flex-direction: column;
+  }
+}
+.main-content .shortend-links .link div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-content .shortend-links .link div a {
+  color: #2acfcf;
+  margin-right: 30px;
+}
+.main-content .shortend-links .link div button {
+  color: white;
+  padding: 12px 0;
+  border-radius: 2rem;
+  background-color: #2acfcf;
+  border: none;
+  width: 100px;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.main-content .shortend-links .link div button:hover {
+  cursor: pointer;
+  background-color: #a3e6e6;
+}
+.main-content .shortend-links .link div .copied {
+  background-color: #3b3054;
+}
+.main-content .shortend-links .link div .copied:hover {
+  background-color: #3b3054;
+}
+@media only screen and (max-width: 600px) {
+  .main-content .shortend-links .link div {
+    flex-direction: column;
+  }
 }
 .main-content .statistics {
   display: flex;
@@ -239,11 +472,16 @@ header img.working {
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin: 25px 0;
+  margin: 25px 0 110px;
+}
+@media only screen and (max-width: 600px) {
+  .main-content .feature-cards {
+    flex-direction: column;
+  }
 }
 .main-content .feature-cards .feature-card {
   position: relative;
-  width: 30%;
+  width: 35%;
   padding: 0 25px 35px;
   background-color: white;
   display: flex;
@@ -309,6 +547,10 @@ header img.working {
   border-radius: 3rem;
   margin-top: 10px;
 }
+.cta button:hover {
+  cursor: pointer;
+  background-color: #a3e6e6;
+}
 
 footer {
   padding: 80px 0;
@@ -321,6 +563,16 @@ footer .container {
   align-items: flex-start;
   width: 78%;
   margin: 0 auto;
+}
+@media only screen and (max-width: 600px) {
+  footer .container {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  footer .container {
+    flex-direction: column;
+  }
 }
 footer nav {
   color: white;
@@ -347,9 +599,16 @@ footer nav .social {
   align-items: baseline;
   width: 20%;
 }
+footer nav .social li img:hover {
+  cursor: pointer;
+  filter: invert(25%) sepia(34%) saturate(5733%) hue-rotate(133deg) brightness(95%) contrast(85%);
+}
 footer nav ul li a {
   text-decoration: none;
   color: #bfbfbf;
+}
+footer nav ul li a:hover {
+  color: #2acfcf;
 }
 footer img {
   filter: brightness(100);

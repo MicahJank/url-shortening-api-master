@@ -8,11 +8,13 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="/index.css" />
+  <link href="/dist/hamburgers.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
 
   <!-- javascript imports -->
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <script src="./javascript/apiRequests.js" async></script>
+  <script src="./javascript/createUrls.js" async></script>
+  <script src="./javascript/toggleHamburger.js" async></script>
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -23,25 +25,32 @@
   <header>
     <!-- Navigation at the top of the page - inlcudes login and sign up buttons -->
     <section class="top-navigation">
+      <img src='./images/logo.svg' alt="shortly logo" />
+      <button class="hamburger hamburger--slider" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button> 
       <nav>
-        <img src='./images/logo.svg' alt="shortly logo" />
-        <a href="">Features</a>
-        <a href="">Pricing</a>
-        <a href="">Resources</a>
+        <div class="left-side">
+          <a href="">Features</a>
+          <a href="">Pricing</a>
+          <a href="">Resources</a>
+        </div>
+        <div class="sign-up">
+          <a class="login btn" href="">Login</a>
+          <a class="signup btn" href="">Sign Up</a>
+        </div>
       </nav>
-      <div class="sign-up">
-        <a class="login btn" href="">Login</a>
-        <a class="signup btn" href="">Sign Up</a>
-      </div>
     </section>
     <!-- Intro Section -->
     <section class="intro">
+      <img class="working" src="./images/illustration-working.svg" alt="at desk working illustration" />
       <h1 class="big-intro">More than just shorter links</h1>
       <p>Build your brand’s recognition and get detailed insights 
         on how your links are performing.</p>
       <a href="" class="get-started">Get Started</a>
     </section>
-    <img class="working" src="./images/illustration-working.svg" alt="at desk working illustration" />
   </header>
 
   <section class="main-content">
@@ -51,6 +60,12 @@
         <input type="text" id="url-input" aria-label="Shorten URL Input" placeholder="Shorten a link here...">
         <button type="submit" class="shorten-btn">Shorten It!</button>
       </form>
+      <p class="input-error"></p>
+    </section>
+
+      <!-- Links Section -->
+    <section class="shortend-links">
+      
     </section>
 
     <!-- Statistics Overview Text -->
