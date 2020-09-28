@@ -1,6 +1,7 @@
 @use 'variables';
 * {
     box-sizing: border-box;
+    outline: none;
 }
 html {
     font-size: 62.5%;
@@ -18,3 +19,4 @@ h3 {
     font-weight: 700;
     margin: 40px 0 20px;
 }
+

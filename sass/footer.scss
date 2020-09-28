@@ -7,6 +7,10 @@ footer {
     .container {
         @include mixins.flexing(row, space-between, flex-start);
         @include mixins.sectionCenter();
+
+        @media only screen and (max-width: 600px) {
+            flex-direction: column;
+        }
     }
 
     nav {
@@ -29,11 +33,22 @@ footer {
         .social {
             @include mixins.flexing(row, space-between, baseline);
             width: 20%;
+
+            li img {
+                &:hover {
+                    cursor: pointer;
+                    filter: invert(25%) sepia(34%) saturate(5733%) hue-rotate(133deg) brightness(95%) contrast(85%);
+                }
+            }
         }
 
         ul li a {
             text-decoration: none;
             color: variables.$gray;
+
+            &:hover {
+                color: variables.$primary-blue;
+            }
         }
     }
 

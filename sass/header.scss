@@ -14,6 +14,11 @@ header {
         color: variables.$gray-violet;
         font-weight: 500;
         font-size: 1.5rem;
+
+        &:hover {
+            color: variables.$dark-violet;
+        }
+
     }
 
     .top-navigation {
@@ -21,19 +26,99 @@ header {
         @include mixins.sectionCenter();
         @include mixins.flexing(row, space-between);
         padding: 50px 0;
+        
 
         .signup.btn {
             @include mixins.button();
         }
 
-        nav {
-            @include mixins.flexing(row, space-between);
-            width: 40%;
+        button.hamburger {
+            display: none;
+
+            @media only screen and (max-width: 600px) {
+                display: block;
+            }
         }
 
-        .sign-up {
+        nav {
             @include mixins.flexing(row, space-between);
-            width: 15%;
+            width: 100%;
+
+            .left-side {
+                @include mixins.flexing(row, space-around);
+                width: 30%;
+                margin-left: 30px;
+                
+            }
+           
+            .sign-up {
+                @include mixins.flexing(row, space-between);
+                width: 17%;
+            }
+
+            @media only screen and (max-width: 600px) {
+                display: none;
+                position: absolute;
+                padding: 40px 20px;
+                flex-direction: column;
+                border-radius: 10px;
+                margin-top: 15px;
+                top: 60px;
+                right: 20px;
+                width: 90%;
+                
+
+  
+                background-color: variables.$primary-purple;
+
+                a {
+                    color: white;
+                    font-size: 1.7rem;
+                    margin-bottom: 40px;
+                }
+                
+                .left-side {
+                    margin: 0;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                }
+
+                .sign-up {
+                    margin: 0;
+                    padding-top: 40px;
+                    width: 100%;
+                    border-top: 1px solid white;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+
+                    .signup.btn {
+                        padding: 15px 0;
+                        width: 100%;
+                        text-align: center;
+                        margin-bottom: 0;
+                    }
+                }
+
+
+            }
+        }
+        // only added when the user clicks the hamburger menu icon
+        .hidden {
+            display: none;
+        }
+        .visible {
+            display: flex;
+        }
+
+        @media only screen and (max-width: 600px)  {
+            width: 100%;
+            padding: 20px 20px 0px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 2;
         }
     }
 
@@ -65,6 +150,20 @@ header {
             @include mixins.button(white, 17px 40px);
             border-radius: 3rem;
         }
+
+        @media only screen and (max-width: 600px)  {
+            width: 100%;
+            margin-top: 400px;
+            padding: 0px;
+            justify-content: center;
+            align-items: center;
+
+            .big-intro {
+                width: 100%;
+                font-size: 4rem;
+                text-align: center;
+            }
+        }
     }
 
     img.working {
@@ -72,6 +171,13 @@ header {
         z-index: 0;
         right: -8%;
         bottom: 18%;
+
+        @media only screen and (max-width: 600px)  {
+            top: 90px;
+            left: 30px;
+            width: 500px;
+            
+        }
     }
 
 }
