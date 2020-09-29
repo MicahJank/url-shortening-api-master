@@ -14,7 +14,7 @@ const errorElement = document.querySelector('.input-error');
 // create the components stored inside shortenedUrls if there are any in the session saved
 shortendURLS.forEach(component => {
     const urlComponent = createComponent(component);
-    linksSection.appendChild(urlComponent);
+    linksSection.appendChild(urlComponent); 
 })
 
 
