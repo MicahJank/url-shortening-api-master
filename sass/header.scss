@@ -173,7 +173,7 @@ header {
         }
     }
 
-    img.working {
+    img.working { 
         position: absolute;
         z-index: 0;
         right: -8%;
@@ -182,7 +182,7 @@ header {
         @media only screen and (max-width: 1200px)  {
             width: 500px;
         }
-        
+
         @media only screen and (max-width: 600px)  {
             top: 90px;
             left: 30px;
